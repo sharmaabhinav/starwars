@@ -1,1 +1,23 @@
-{{outlet}}
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    {{#bs-form formLayout=formLayout model=this as |form|}}
+      {{form.element controlType="textbox" label="Search by planet name" placeholder="Enter planet name" property="planetname" required=true keyUp=(action 'searchPlanets')}}
+    {{/bs-form}}
+  </div>
+</div>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <th>Planet name</th>
+    <th>Planet population</th>
+  </thead>
+  <tbody>
+    {{#each planets as |planet|}}
+      <tr>
+        <td>{{planet.name}}</td>
+        <td>{{planet.population}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+

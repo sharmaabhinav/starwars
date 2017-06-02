@@ -7,6 +7,12 @@ export default Ember.Service.extend({
 
   getPassword (username) {
     return this.get('ajax').request(`http://swapi.co/api/people/?search=${username}`)
+  },
+
+  getPlanet (searchParam) {
+    return this.get('ajax').request(`http://swapi.co/api/planets/?search=${searchParam}`)
   }
+
+
 
 });
