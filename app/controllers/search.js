@@ -10,7 +10,6 @@ export default Ember.Controller.extend({
   },
   actions: {
     searchPlanets() {
-      let planetname = this.get('planetname')
       this.get('swapi').getPlanet(this.get('planetname')).then((response) => {
         this.set('planets', response.results)
       })
