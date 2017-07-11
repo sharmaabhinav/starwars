@@ -45,6 +45,6 @@
   },
   "private": true,
   "dependencies": {
-    "swapi-node": "file:node_modules/swapi-node"
+    "swapi-node": "0.4.1"
   }
 }
